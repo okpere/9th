@@ -13,14 +13,14 @@ export default function Hero() {
   const [arrowClicked, setArrowClicked] = useState(false);
 
   const textLine1 = '9th Tech Limited';
-  const textLine2 = 's t r a t e g i e s  .S y s t e m s  .S o l u t i o n s';
+  const textLine2 = 'Strategies  .Systems  .Solutions';
   const letters = splitText(textLine2);
 
   return (
     <div className='relative w-full h-screen overflow-hidden'>
       {/* Background Image */}
       <motion.img
-        src='/images/hero-image.png'
+        src='/images/Frame 33757.svg'
         alt='Hero'
         initial={{ opacity: 0, scale: 1.05 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -74,7 +74,7 @@ export default function Hero() {
         className='absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 cursor-pointer'
         animate={
           arrowClicked
-            ? { y: 0 } // stop animation
+            ? { y: 0 } 
             : {
                 y: [0, -10, 0],
               }
