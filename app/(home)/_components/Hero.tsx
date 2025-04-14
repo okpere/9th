@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
-// Helper: Split the text into individual characters
 const splitText = (text: string) =>
   text.split('').map((char, index) => ({
     char,
@@ -29,20 +28,20 @@ export default function Hero() {
       />
 
       {/* Text Overlay */}
-      <div className='absolute inset-0 flex flex-col items-center justify-center z-10'>
+      <div className='absolute inset-0 flex flex-col items-center justify-start pt-60 z-10'>
         {/* First Line: Fade In */}
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.6, duration: 1, ease: 'easeOut' }}
-          className='text-white text-4xl md:text-6xl font-bold drop-shadow-lg mb-4'
+          className='text-white text-4xl md:text-6xl font-bold drop-shadow-lg mb-6'
         >
           {textLine1}
         </motion.h1>
 
         {/* Second Line: Typing Effect */}
         <motion.div
-          className='text-white text-lg md:text-2xl font-medium tracking-wider flex flex-wrap justify-center'
+          className='text-white text-lg md:text-2xl font-medium tracking-[0.2em] flex flex-wrap justify-center'
           initial='hidden'
           animate='visible'
           variants={{
@@ -74,7 +73,7 @@ export default function Hero() {
         className='absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 cursor-pointer'
         animate={
           arrowClicked
-            ? { y: 0 } 
+            ? { y: 0 }
             : {
                 y: [0, -10, 0],
               }

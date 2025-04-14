@@ -4,10 +4,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const brands = [
-  'Innovation',
-  'Development',
-  'Market Managements',
-  'Market Competition',
+  'Retail and Wholesale',
+  'Real Estate',
+  'Logistics',
+  'Professional Services',
+  'Artisan Services',
 ];
 
 export default function Brands() {
@@ -15,19 +16,18 @@ export default function Brands() {
     <section className='bg-white py-20 px-6 md:px-20 flex flex-col items-center justify-center text-center min-h-screen '>
       {/* Top text section */}
       <div className='space-y-4 max-w-3xl'>
-        <h2 className='text-4xl font-semibold text-gray-800'>
-          Focusing on quality,{' '}
-          <span className='text-gray-500'>we maintain customer trust</span>
+        <h2 className='text-5xl font-semibold text-gray-800'>
+          Focusing on,{" "}
+          <span className='text-gray-500'>Quality and Africa </span>
         </h2>
-        <p className='text-gray-600'>
-          We ensure that every installation we build has strict quality checks.
-          Sustainable solutions for an environmentally friendly and renewable
-          future.
+        <p className='text-gray-600 text-lg'>
+          we maintain customer trust to be a facilitator of seamless real estate
+          investmets in Africa and transform the African e-commerce.
         </p>
       </div>
 
       {/* Bottom circles */}
-      <div className='grid grid-cols-2 md:grid-cols-4 gap-10 mt-16'>
+      <div className='grid grid-cols-2 md:grid-cols-5 gap-10 mt-16'>
         {brands.map((brand, index) => (
           <motion.div
             key={brand}

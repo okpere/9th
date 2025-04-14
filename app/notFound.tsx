@@ -1,3 +1,5 @@
+// app/not-found.tsx
+
 export default function NotFound() {
   return (
     <main className='grid min-h-full place-items-center bg-white px-6 pt-36 pb-24 lg:px-8'>
@@ -10,7 +12,13 @@ export default function NotFound() {
           Sorry, we couldn’t find the page you’re looking for.
         </p>
         <div className='mt-10 flex items-center justify-center gap-x-6'>
-          {/* <GoBack /> */}
+          {/* You can add a button to go back */}
+          <a
+            href='/'
+            className='rounded-md bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500'
+          >
+            Go back home
+          </a>
         </div>
       </div>
     </main>

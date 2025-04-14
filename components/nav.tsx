@@ -2,6 +2,7 @@
 
 import * as React from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import {
   NavigationMenu,
@@ -16,8 +17,11 @@ import { Button } from './ui/button';
 import { Menu, X } from 'lucide-react';
 
 export function Navigation() {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = React.useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+
+  const isAboutPage = pathname === '/about';
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -32,20 +36,19 @@ export function Navigation() {
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Contact Us', href: '/contact' },
-    { name: 'FAQ', href: '/blog' },
     { name: 'Products', href: '/products' },
   ];
+
+  const showWhiteBg = isScrolled || isAboutPage;
 
   return (
     <NavigationMenu
       className={cn(
         'fixed top-0 left-0 w-full z-50 transition-all duration-300',
-        isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
+        showWhiteBg ? 'bg-white shadow-md' : 'bg-transparent'
       )}
     >
       <div className='flex items-center justify-between px-6 py-4 md:px-8 md:py-6'>
-        {/* <Logo /> */}
-
         {/* Desktop Navigation */}
         <div className='hidden md:flex items-center gap-6 justify-between w-[85%] mx-auto'>
           <Logo />
@@ -56,7 +59,7 @@ export function Navigation() {
                 <NavigationMenuTrigger
                   className={cn(
                     'bg-transparent text-base font-medium',
-                    isScrolled ? 'text-[#ff0000]' : 'text-white',
+                    showWhiteBg ? 'text-[#ff0000]' : 'text-white',
                     'hover:text-[#ff0000]'
                   )}
                 >
@@ -64,39 +67,13 @@ export function Navigation() {
                 </NavigationMenuTrigger>
               </NavigationMenuItem>
             ))}
-
-            {/* <NavigationMenuItem>
-              <NavigationMenuTrigger
-                className={cn(
-                  'bg-transparent text-base font-medium',
-                  isScrolled ? 'text-[#ff0000]' : 'text-white',
-                  'hover:text-[#ff0000]'
-                )}
-              >
-                Products
-              </NavigationMenuTrigger>
-              <NavigationMenuContent className='bg-white p-4 shadow-lg rounded-md'>
-                <NavigationMenuLink
-                  href='/products/Marketplace'
-                  className='block px-2 py-1 text-sm text-gray-800 hover:text-[#ff0000]'
-                >
-                  9th Market Place
-                </NavigationMenuLink>
-                <NavigationMenuLink
-                  href='/products/fixtures'
-                  className='block px-2 py-1 text-sm text-gray-800 hover:text-[#ff0000]'
-                >
-                  Fixtures
-                </NavigationMenuLink>
-              </NavigationMenuContent>
-            </NavigationMenuItem> */}
           </NavigationMenuList>
 
           <Button
             variant='outline'
             className={cn(
               'cursor-pointer',
-              isScrolled
+              showWhiteBg
                 ? 'text-[#ff0000] border-[#ff0000]'
                 : 'text-black border-white'
             )}
@@ -114,14 +91,14 @@ export function Navigation() {
               <X
                 className={cn(
                   'w-6 h-6',
-                  isScrolled ? 'text-[#ff0000]' : 'text-white'
+                  showWhiteBg ? 'text-[#ff0000]' : 'text-white'
                 )}
               />
             ) : (
               <Menu
                 className={cn(
                   'w-6 h-6',
-                  isScrolled ? 'text-[#ff0000]' : 'text-white'
+                  showWhiteBg ? 'text-[#ff0000]' : 'text-white'
                 )}
               />
             )}
@@ -143,25 +120,6 @@ export function Navigation() {
                 {item.name}
               </Link>
             ))}
-
-            <div className='mt-4'>
-              <p className='text-sm text-gray-500 mb-2'>Products</p>
-              <Link
-                href='/products/Marketplace'
-                className='block text-gray-800 hover:text-[#ff0000]'
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                9th Market Place
-              </Link>
-              <Link
-                href='/products/fixtures'
-                className='block text-gray-800 hover:text-[#ff0000]'
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Fixtures
-              </Link>
-            </div>
-
             <Button
               variant='outline'
               className='mt-6 text-[#ff0000] border-[#ff0000]'
