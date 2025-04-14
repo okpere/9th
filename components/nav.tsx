@@ -23,6 +23,7 @@ export function Navigation() {
 
   const isAboutPage = pathname === '/about';
   const isContactPage = pathname === '/contactUs';
+  const isProductsPage = pathname === '/products';
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -40,7 +41,7 @@ export function Navigation() {
     { name: 'Products', href: '/products' },
   ];
 
-  const showWhiteBg = isScrolled || isContactPage;
+  const showWhiteBg = isScrolled || isContactPage || isProductsPage;
 
   return (
     <NavigationMenu
