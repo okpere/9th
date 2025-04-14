@@ -39,7 +39,7 @@ export function Navigation() {
     { name: 'Products', href: '/products' },
   ];
 
-  const showWhiteBg = isScrolled || isAboutPage;
+  const showWhiteBg = isScrolled
 
   return (
     <NavigationMenu
