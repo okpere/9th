@@ -87,7 +87,12 @@ export default function Hero() {
                 ease: 'easeInOut',
               }
         }
-        onClick={() => setArrowClicked(true)}
+        onClick={() => {
+          window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: 'smooth',
+          });
+        }}
       >
         <svg
           xmlns='http://www.w3.org/2000/svg'
