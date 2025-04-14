@@ -39,7 +39,7 @@ const products = [
 
 export default function ProductPage() {
   return (
-    <div className=' min-h-screen px-4 py-16 '>
+    <div className='bg-[#f5f5fb] min-h-screen px-4 py-16 mt-12'>
       {/* Write-up section */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
@@ -63,8 +63,10 @@ export default function ProductPage() {
           <motion.div
             key={product.id}
             initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 30 }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
+            viewport={{ once: true }}  // Ensure animation triggers only once as the element enters the view
             className='bg-white rounded-2xl shadow-lg overflow-hidden'
           >
             <div className='w-full h-60 bg-gray-300'></div>{' '}
