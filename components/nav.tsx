@@ -80,7 +80,7 @@ export function Navigation() {
                 : 'text-black border-white'
             )}
           >
-            Get Started
+            Contact Us
           </Button>
         </div>
 
@@ -127,7 +127,7 @@ export function Navigation() {
               className='mt-6 text-[#ff0000] border-[#ff0000]'
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Get Started
+              Contact Us
             </Button>
           </nav>
         </div>
