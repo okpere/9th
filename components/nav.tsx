@@ -22,6 +22,7 @@ export function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
 
   const isAboutPage = pathname === '/about';
+  const isContactPage = pathname === '/contactUs';
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -35,11 +36,11 @@ export function Navigation() {
   const navItems = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
-    { name: 'Contact Us', href: '/contact' },
+    { name: 'Contact Us', href: '/contactUs' },
     { name: 'Products', href: '/products' },
   ];
 
-  const showWhiteBg = isScrolled
+  const showWhiteBg = isScrolled || isContactPage;
 
   return (
     <NavigationMenu
