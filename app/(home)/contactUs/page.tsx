@@ -3,7 +3,7 @@ import ContactForm from './contactform';
 
 export default function page() {
   return (
-    <div>
+    <div className='mt-10'>
       <ContactForm />
     </div>
   );
