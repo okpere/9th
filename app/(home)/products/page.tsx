@@ -8,8 +8,8 @@ import Link from 'next/link';
 const products = [
   {
     id: 1,
-    image: '/images/at.svg',
     name: 'Retail and Wholesale',
+    image: '/images/pro.svg',
     description:
       'Access a broad range of wholesale products for retail businesses. Get the best prices and bulk purchasing options.',
   },
@@ -30,14 +30,14 @@ const products = [
   {
     id: 4,
     name: 'Professional Services',
-    image: '/images/pro.svg',
+    image: '/images/atis.svg',
     description:
       'Find a variety of professional services ranging from legal, accounting, and marketing to consultancy and more.',
   },
   {
     id: 5,
-    image: '/images/atis.svg',
     name: 'Artisan Services',
+    image: '/images/Artisan.svg',
     description:
       'Support local artisans and discover unique, handmade products and services crafted with passion and skill.',
   },
