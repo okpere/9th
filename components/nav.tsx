@@ -70,18 +70,19 @@ export function Navigation() {
               </NavigationMenuItem>
             ))}
           </NavigationMenuList>
-
-          <Button
-            variant='outline'
-            className={cn(
-              'cursor-pointer',
-              showWhiteBg
-                ? 'text-[#ff0000] border-[#ff0000]'
-                : 'text-black border-white'
-            )}
-          >
-            Contact Us
-          </Button>
+          <Link href='tel:+234902 777 2514'>
+            <Button
+              variant='outline'
+              className={cn(
+                'cursor-pointer',
+                showWhiteBg
+                  ? 'text-[#ff0000] border-[#ff0000]'
+                  : 'text-black border-white'
+              )}
+            >
+              Contact Us
+            </Button>
+          </Link>
         </div>
 
         {/* Mobile Hamburger Icon */}
@@ -122,13 +123,15 @@ export function Navigation() {
                 {item.name}
               </Link>
             ))}
-            <Button
-              variant='outline'
-              className='mt-6 text-[#ff0000] border-[#ff0000]'
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Contact Us
-            </Button>
+            <Link href='tel:+2340902 777 2514'>
+              <Button
+                variant='outline'
+                className='mt-6 text-[#ff0000] border-[#ff0000]'
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Contact Us
+              </Button>
+            </Link>
           </nav>
         </div>
       )}
