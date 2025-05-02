@@ -3,10 +3,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 const products = [
   {
     id: 1,
+    image: '/images/at.svg',
     name: 'Retail and Wholesale',
     description:
       'Access a broad range of wholesale products for retail businesses. Get the best prices and bulk purchasing options.',
@@ -14,23 +16,27 @@ const products = [
   {
     id: 2,
     name: 'Real Estate',
+    image: '/images/es.svg',
     description:
       'Explore real estate opportunities for both buyers and sellers. Find your dream property or the perfect investment.',
   },
   {
     id: 3,
     name: 'Logistics',
+    image: '/images/lg.svg',
     description:
       'Manage and streamline your logistics operations with our efficient solutions. From warehousing to delivery.',
   },
   {
     id: 4,
     name: 'Professional Services',
+    image: '/images/pro.svg',
     description:
       'Find a variety of professional services ranging from legal, accounting, and marketing to consultancy and more.',
   },
   {
     id: 5,
+    image: '/images/atis.svg',
     name: 'Artisan Services',
     description:
       'Support local artisans and discover unique, handmade products and services crafted with passion and skill.',
@@ -66,11 +72,18 @@ export default function ProductPage() {
             whileInView={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 30 }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
-            viewport={{ once: true }}  // Ensure animation triggers only once as the element enters the view
+            viewport={{ once: true }}
             className='bg-white rounded-2xl shadow-lg overflow-hidden'
           >
-            <div className='w-full h-60 bg-gray-300'></div>{' '}
-            {/* Placeholder for the image */}
+            {product.image ? (
+              <img
+                src={product.image}
+                alt={product.name}
+                className='w-full h-60 object-cover'
+              />
+            ) : (
+              <div className='w-full h-60 bg-gray-300'></div>
+            )}
             <div className='p-5'>
               <h3 className='text-xl font-bold text-[#1d1d1f] mb-2'>
                 {product.name}
@@ -78,12 +91,14 @@ export default function ProductPage() {
               <p className='text-gray-600 text-sm mb-4'>
                 {product.description}
               </p>
-              <Button
-                variant='outline'
-                className='border-[#FF0000] text-[#ff0000] py-2 px-4 '
-              >
-                Get Started
-              </Button>
+              <Link href={'https://www.9th.africa/marketplace'}>
+                <Button
+                  variant='outline'
+                  className='border-[#FF0000] text-[#ff0000] py-2 px-4 '
+                >
+                  Get Started
+                </Button>
+              </Link>
             </div>
           </motion.div>
         ))}
