@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import GlobalLayout from '@/components/layout';
 import { Lato } from 'next/font/google';
@@ -28,6 +27,8 @@ export default function RootLayout({
     <html lang='en'>
       <head>
         {/* Add any additional <meta> tags here if needed */}
+        <link rel='icon' type='image/svg+xml' href='/iconNow.svg' />
+
         <Script
           id='tawk-to'
           strategy='afterInteractive'
