@@ -62,7 +62,6 @@ export default function ProductPage() {
           something tailored just for you.
         </p>
       </motion.div>
-
       {/* Product Grid */}
       <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto'>
         {products.map((product, index) => (

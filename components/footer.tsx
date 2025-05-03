@@ -60,7 +60,11 @@ export default function Footer() {
 
         {/* Address */}
         <div>
-          <h3 className='text-lg font-semibold mb-2'>Our Office</h3>
+          <h3 className='text-lg font-semibold mb-2'>Office Locations</h3>
+          <p className='text-sm'>
+            24b Nza street, Independence Layout, Enugu,Enugu-North LGA, Enugu
+          </p>
+          <br />
           <p className='text-sm'>
             Suite 304A, Bahamas Plaza, 1080 Joseph Gomwalk Street, <br />
             Gudu, Abuja, Nigeria.
