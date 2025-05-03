@@ -18,7 +18,8 @@ export default function Footer() {
             <Logo />
           </div>
           <p className='text-sm'>Phone: 0700044499</p>
-          <p className='text-sm'>Email: support@9th.ng</p>
+          <p className='text-sm'>Email: support@9thtechlimited.com</p>
+          <p className='text-sm'></p>
         </div>
 
         {/* Products */}

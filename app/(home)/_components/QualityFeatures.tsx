@@ -1,38 +1,77 @@
 import React from 'react';
 import {
-  Lightbulb,
-  Store,
-  TrendingUp,
-  Trophy,
-  ShieldCheck,
+  Code2,
+  PenTool,
+  Landmark,
+  BrainCog,
+  ServerCog,
+  ShieldAlert,
+  Network,
+  Layers,
+  Bug,
+  GraduationCap,
 } from 'lucide-react';
 
 const features = [
   {
-    title: 'Innovation',
-    description: 'Focus on creative solutions.',
-    icon: <Lightbulb className='text-[#ff0000] w-6 h-6' />,
-  },
-  {
-    title: 'Marketplace Management',
-    description: 'Overseeing 9th marketplace operations.',
-    icon: <Store className='text-[#ff0000] w-6 h-6' />,
-  },
-  {
-    title: 'Growth and Development',
-    description: 'Ensuring mutual growth with clients and employees.',
-    icon: <TrendingUp className='text-[#ff0000] w-6 h-6' />,
-  },
-  {
-    title: 'Market Competitiveness',
-    description: 'Staying ahead in the tech market.',
-    icon: <Trophy className='text-[#ff0000] w-6 h-6' />,
-  },
-  {
-    title: 'Delivered safely',
+    title: 'Custom Software Development',
     description:
-      'Every unit we send arrives safely and quickly, without any obstacles or drama.',
-    icon: <ShieldCheck className='text-[#ff0000] w-6 h-6' />,
+      'Design, build, and maintain bespoke web, mobile, and desktop applications for businesses across sectors.',
+    icon: <Code2 className='text-[#ff0000] w-6 h-6' />,
+  },
+  {
+    title: 'Product Design & Engineering',
+    description:
+      'End-to-end product ideation, UI/UX design, prototyping, MVP development, and scaling of digital products.',
+    icon: <PenTool className='text-[#ff0000] w-6 h-6' />,
+  },
+  {
+    title: 'IT Consulting & Strategy',
+    description:
+      'Technology advisory, digital transformation, product-market fit guidance, and agile coaching for startups and enterprises.',
+    icon: <Landmark className='text-[#ff0000] w-6 h-6' />,
+  },
+  {
+    title: 'AI & Data Solutions',
+    description:
+      'Machine learning model development, data analytics, AI integration, and intelligent automation systems.',
+    icon: <BrainCog className='text-[#ff0000] w-6 h-6' />,
+  },
+  {
+    title: 'Cloud Infrastructure & DevOps',
+    description:
+      'Deployment of scalable cloud systems (AWS, Azure, GCP), CI/CD pipelines, containerization (Docker, Kubernetes).',
+    icon: <ServerCog className='text-[#ff0000] w-6 h-6' />,
+  },
+  {
+    title: 'Cybersecurity Services',
+    description:
+      'Risk assessments, secure architecture reviews, penetration testing, and compliance audits (e.g., GDPR, ISO 27001).',
+    icon: <ShieldAlert className='text-[#ff0000] w-6 h-6' />,
+  },
+  {
+    title: 'Blockchain Development',
+    description:
+      'Decentralized apps (dApps), smart contracts, crypto wallet integration, and NFT solutions.',
+    icon: <Network className='text-[#ff0000] w-6 h-6' />,
+  },
+  {
+    title: 'SaaS Platform Development',
+    description:
+      'Full-stack development and hosting of SaaS products—from admin dashboards to subscription systems.',
+    icon: <Layers className='text-[#ff0000] w-6 h-6' />,
+  },
+  {
+    title: 'QA & Software Testing',
+    description:
+      'Manual and automated testing, performance benchmarking, usability testing, and release assurance.',
+    icon: <Bug className='text-[#ff0000] w-6 h-6' />,
+  },
+  {
+    title: 'Technical Training & Talent Incubation',
+    description:
+      'Specialized tech bootcamps, developer training, and partner company upskilling programs.',
+    icon: <GraduationCap className='text-[#ff0000] w-6 h-6' />,
   },
 ];
 
